@@ -6,17 +6,18 @@
 
 <body>
     <h1>Order!</h1>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
-                    <th>Prices</th>
+                    <th colspan="2">Prices</th>  <!-- can this span both columns? -->
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                     <td>Melon Name</td>
                     <td>Price per lb.</td>
                 </tr>
+
+            </thead>
+            <tbody>
 
                 <tr>
                     <td>Watermelon</td>
@@ -45,32 +46,31 @@
         <p>Place your orders here! You know you want to.</p>
 
         <form action= "https://ubermelon-order-form.herokuapp.com/process"method="GET">
-            <table>First Name:<input type="text" name="firstname"></table>
-            <table>Last Name:<input type="text" name="lastname"></table>
-            <table>Melon Type<select name="melontype">
+            First Name:<input type="text" name="firstname"><br>
+            Last Name:<input type="text" name="lastname"><br>
+            Melon Type<select name="melontype">
                 <option value="watermelon">Watermelon </option>
                 <option value="honeydew">Honeydew </option>
                 <option value="canteloupe">Canteloupe </option>
                 <option value="crenshaw">Crenshaw </option>
-                <option value="canary">Canary </option></table>
-            <table>Quantity*:<input type="text" name="quantity"></table>
-            <table>Delivery Time
-                <input type="radio" name="time">12:00am-12:00pm
-                <input type="radio" name="time">12:00pm-12:00am
-                <input type="radio" name="time">Time is an illusion
-            </table>   
-            <table>Returning Customer?
-                <input type="radio" name="returning">Yes
-                <input type="radio" name="returning">No 
-            </table>
-            <table>For Statistical Purposes:
-                <input type="checkbox" name="animals">Dog
-                <input type="checkbox" name="animals">Cat
-                <input type="checkbox" name="animals">Hedgehog
-                <input type="checkbox" name="animals">Balloonicorn
-                <input type="checkbox" name="animals">Yak
-            </table>      
-            <table><input type="submit"></table>
+                <option value="canary">Canary </option>
+            </select><br>
+            Quantity*:
+                <input type="text" name="quantity"><br>
+            Delivery Time
+                <input type="radio" name="time" value="am">12:00am-12:00pm
+                <input type="radio" name="time" value="pm">12:00pm-12:00am
+                <input type="radio" name="time" value="wat">Time is an illusion<br>
+            Returning Customer?
+                <input type="radio" name="returning" value="yes">Yes
+                <input type="radio" name="returning" value="no">No<br> 
+            For Statistical Purposes:
+                <input type="checkbox" name="animals" value="dog">Dog
+                <input type="checkbox" name="animals" value="cat">Cat
+                <input type="checkbox" name="animals" value="hedgehog">Hedgehog
+                <input type="checkbox" name="animals" value="balloonicorn">Balloonicorn
+                <input type="checkbox" name="animals" value="yak">Yak<br>     
+            <input type="submit">
         </form>
 </body>
 <footer>*Quantities give are by the flat.</footer>
